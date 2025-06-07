@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/java-in-readme-site/static/css/main.5082c57d.css",
-    "main.js": "/java-in-readme-site/static/js/main.0f3f976a.js",
+    "main.css": "/java-in-readme-site/static/css/main.dba67f49.css",
+    "main.js": "/java-in-readme-site/static/js/main.a9c4e09d.js",
     "static/js/453.b2525673.chunk.js": "/java-in-readme-site/static/js/453.b2525673.chunk.js",
     "static/media/fraction.cjs": "/java-in-readme-site/static/media/fraction.7992481f3d8339b77604.cjs",
     "index.html": "/java-in-readme-site/index.html",
     "static/media/index.cjs": "/java-in-readme-site/static/media/index.f6d03137e8c9dd0de04c.cjs",
-    "main.5082c57d.css.map": "/java-in-readme-site/static/css/main.5082c57d.css.map",
-    "main.0f3f976a.js.map": "/java-in-readme-site/static/js/main.0f3f976a.js.map",
+    "main.dba67f49.css.map": "/java-in-readme-site/static/css/main.dba67f49.css.map",
+    "main.a9c4e09d.js.map": "/java-in-readme-site/static/js/main.a9c4e09d.js.map",
     "453.b2525673.chunk.js.map": "/java-in-readme-site/static/js/453.b2525673.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5082c57d.css",
-    "static/js/main.0f3f976a.js"
+    "static/css/main.dba67f49.css",
+    "static/js/main.a9c4e09d.js"
   ]
 }
