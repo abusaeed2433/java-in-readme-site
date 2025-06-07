@@ -58,6 +58,12 @@ export default function App() {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  const handleClose = () => {
+    setSelectedTopic(null);
+    setSelectedSubTopic(null);
+    setBlogContent('');
+  };
+
   // Show loading only for initial load
   if (initialLoading) {
     return (
@@ -112,6 +118,7 @@ export default function App() {
         blogContent={blogContent}
         onToggleMobile={toggleMobileMenu}
         isLoading={contentLoading}
+        onClose={handleClose}
       />
     </div>
   );

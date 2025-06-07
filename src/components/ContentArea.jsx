@@ -1,8 +1,9 @@
 import React from 'react';
 import MarkdownRenderer from './MarkdownRenderer';
-import { Menu } from 'lucide-react';
+import HomePage from './HomePage';
+import { Menu, X } from 'lucide-react';
 
-const ContentArea = ({ blogContent, onToggleMobile, isLoading }) => {
+const ContentArea = ({ blogContent, onToggleMobile, isLoading, onClose }) => {
   const renderContent = () => {
     if (isLoading) {
       return (
@@ -13,18 +14,25 @@ const ContentArea = ({ blogContent, onToggleMobile, isLoading }) => {
     }
 
     if (!blogContent) {
-      return (
-        <div className="flex items-center justify-center text-gray-300">
-          <span>Select a topic and subtopic to view content.</span>
-        </div>
-      );
+      return <HomePage />;
     }
 
-    return <MarkdownRenderer content={blogContent} />;
+    return (
+      <div className="relative">
+        <button
+          onClick={onClose}
+          className="absolute right-0 top-0 p-2 text-gray-400 hover:text-white"
+          title="Close content"
+        >
+          <X className="w-5 h-5" />
+        </button>
+        <MarkdownRenderer content={blogContent} />
+      </div>
+    );
   };
 
   return (
-    <div className="flex-1 bg-slate-900 flex flex-col h-screen">
+    <div className="flex-1 bg-slate-900 flex flex-col min-h-screen max-h-screen">
       {/* Mobile menu button */}
       <div className="lg:hidden bg-slate-900 border-b border-slate-800 p-4 flex-shrink-0">
         <button 
@@ -35,7 +43,7 @@ const ContentArea = ({ blogContent, onToggleMobile, isLoading }) => {
         </button>
       </div>
       {/* Content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto min-h-0">
         <div className="w-[95%] mx-auto py-8 px-4">
           <div className="bg-slate-800 rounded-xl shadow-sm border border-slate-700 p-8">
             {renderContent()}

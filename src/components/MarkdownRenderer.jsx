@@ -1,4 +1,3 @@
-import React from 'react';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 
 const MarkdownRenderer = ({ content }) => {
@@ -11,7 +10,7 @@ const MarkdownRenderer = ({ content }) => {
         }}
         style={{
           backgroundColor: 'transparent',
-          color: '#e5e7eb', // text-gray-300
+          color: '#e5e7eb'
         }}
       />
     </div>
