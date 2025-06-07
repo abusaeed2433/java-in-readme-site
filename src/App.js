@@ -50,10 +50,43 @@ export default function App() {
     loadBlog();
   }, [selectedTopic, selectedSubTopic]);
 
+  // Add this useEffect to handle initial URL and popstate events
+  useEffect(() => {
+    // Parse URL on initial load
+    const parseUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      const topic = params.get('topic');
+      const subtopic = params.get('subtopic');
+      
+      if (topic && subtopic) {
+        setSelectedTopic(decodeURIComponent(topic));
+        setSelectedSubTopic(decodeURIComponent(subtopic));
+      }
+    };
+
+    // Handle browser back/forward buttons
+    const handlePopState = () => {
+      parseUrl();
+    };
+
+    parseUrl();
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
   const handleSelectSubTopic = (topic, subTopic) => {
     setSelectedTopic(topic);
     setSelectedSubTopic(subTopic);
     setIsMobileMenuOpen(false);
+
+    // Update URL without page reload
+    const url = new URL(window.location);
+    url.searchParams.set('topic', encodeURIComponent(topic));
+    url.searchParams.set('subtopic', encodeURIComponent(subTopic));
+    window.history.pushState({}, '', url);
   };
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -62,6 +95,12 @@ export default function App() {
     setSelectedTopic(null);
     setSelectedSubTopic(null);
     setBlogContent('');
+
+    // Remove query parameters from URL
+    const url = new URL(window.location);
+    url.searchParams.delete('topic');
+    url.searchParams.delete('subtopic');
+    window.history.pushState({}, '', url);
   };
 
   // Show loading only for initial load
