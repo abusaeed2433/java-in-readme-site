@@ -17,7 +17,6 @@ const HomePage = () => {
 
       const topicNames = topicsData.map(topic => topic.topic_name);
       setTopics(topicNames);
-      console.log('Fetched Topics:', topicNames);
     };
 
     loadData();

@@ -1,7 +1,6 @@
 import { data } from "autoprefixer";
 
-// const API_BASE_URL = 'https://apiendpoint.site/jir/api/v1';
-const API_BASE_URL = 'http://140.245.16.95:8082/api/v1';
+const API_BASE_URL = 'https://apiendpoint.site/jir/api/v1';
 
 // Fetch indices from your Spring Boot API
 export async function fetchIndices() {
@@ -28,7 +27,6 @@ export async function fetchBlog(topicName, subTopicName) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log('Fetched blog content:', data.data.content);
     
     return data.data.content || 'Content unavailable';
   } catch (error) {
