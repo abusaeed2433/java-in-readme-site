@@ -1,6 +1,7 @@
 import { data } from "autoprefixer";
 
-const API_BASE_URL = 'https://apiendpoint.site/jir/api/v1';
+// const API_BASE_URL = 'https://apiendpoint.site/jir/api/v1';
+const API_BASE_URL = 'http://140.245.16.95:8082/api/v1';
 
 // Fetch indices from your Spring Boot API
 export async function fetchIndices() {
