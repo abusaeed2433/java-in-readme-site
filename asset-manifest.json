@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/java-in-readme-site/static/css/main.dba67f49.css",
-    "main.js": "/java-in-readme-site/static/js/main.b5ab09af.js",
+    "main.js": "/java-in-readme-site/static/js/main.8da07c84.js",
     "static/js/453.b2525673.chunk.js": "/java-in-readme-site/static/js/453.b2525673.chunk.js",
     "static/media/fraction.cjs": "/java-in-readme-site/static/media/fraction.7992481f3d8339b77604.cjs",
     "index.html": "/java-in-readme-site/index.html",
     "static/media/index.cjs": "/java-in-readme-site/static/media/index.f6d03137e8c9dd0de04c.cjs",
     "main.dba67f49.css.map": "/java-in-readme-site/static/css/main.dba67f49.css.map",
-    "main.b5ab09af.js.map": "/java-in-readme-site/static/js/main.b5ab09af.js.map",
+    "main.8da07c84.js.map": "/java-in-readme-site/static/js/main.8da07c84.js.map",
     "453.b2525673.chunk.js.map": "/java-in-readme-site/static/js/453.b2525673.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dba67f49.css",
-    "static/js/main.b5ab09af.js"
+    "static/js/main.8da07c84.js"
   ]
 }
