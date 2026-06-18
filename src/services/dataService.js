@@ -1,6 +1,6 @@
 import { data } from "autoprefixer";
 
-const API_BASE_URL = 'https://com.thelazymind.com/jir/api/v1';
+const API_BASE_URL = 'https://jir.thelazymind.com/api/v1';
 
 // Fetch indices from your Spring Boot API
 export async function fetchIndices() {
